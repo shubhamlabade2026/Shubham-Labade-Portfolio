@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shubhamlabade2026.github.io/Shubham-Labade-Portfolio/sitemap.xml
