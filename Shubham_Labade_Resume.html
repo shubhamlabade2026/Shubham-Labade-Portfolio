@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Labade - Resume | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* ===== Reset & Base ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --accent: #0ea5e9;
+            --green: #10b981;
+            --bg: #0f0f23;
+            --card: rgba(255,255,255,0.05);
+            --glass: rgba(255,255,255,0.08);
+            --border: rgba(255,255,255,0.1);
+            --text: #ffffff;
+            --text-sec: rgba(255,255,255,0.72);
+            --text-muted: rgba(255,255,255,0.48);
+            --grad: linear-gradient(135deg, #6366f1, #8b5cf6);
+            --grad-accent: linear-gradient(135deg, #0ea5e9, #06b6d4);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* ===== Print Controls (hidden on print) ===== */
+        .print-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 999;
+            padding: 14px 30px;
+            background: rgba(15, 15, 35, 0.96);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .print-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .print-bar a.back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-sec);
+            padding: 8px 16px;
+            border-radius: 50px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .print-bar a.back-btn:hover {
+            color: var(--text);
+            border-color: var(--primary-light);
+            background: rgba(99,102,241,0.1);
+        }
+
+        .print-bar-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .print-bar-actions { display: flex; gap: 12px; }
+
+        .btn-pdf {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.25s;
+        }
+
+        .btn-pdf-primary {
+            background: var(--grad);
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(99,102,241,0.3);
+        }
+
+        .btn-pdf-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99,102,241,0.45);
+        }
+
+        /* ===== Resume Wrapper ===== */
+        .resume-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 24px 60px;
+        }
+
+        /* ===== Resume Card ===== */
+        .resume-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        }
+
+        /* ===== Header ===== */
+        .resume-header {
+            background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 60%, #0c0a25 100%);
+            padding: 48px 48px 36px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume-header::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(99,102,241,0.3) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .resume-header::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: -60px;
+            width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(14,165,233,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .header-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 3px solid rgba(99,102,241,0.6);
+            box-shadow: 0 0 40px rgba(99,102,241,0.3);
+            flex-shrink: 0;
+        }
+
+        .header-avatar-placeholder {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: var(--grad);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #fff;
+            border: 3px solid rgba(99,102,241,0.6);
+            box-shadow: 0 0 40px rgba(99,102,241,0.3);
+            flex-shrink: 0;
+        }
+
+        .header-info { flex: 1; }
+
+        .header-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 30%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .header-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .header-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-green {
+            background: rgba(16,185,129,0.15);
+            border: 1px solid rgba(16,185,129,0.4);
+            color: #10b981;
+        }
+
+        .badge-blue {
+            background: rgba(14,165,233,0.15);
+            border: 1px solid rgba(14,165,233,0.4);
+            color: #38bdf8;
+        }
+
+        .badge-purple {
+            background: rgba(99,102,241,0.15);
+            border: 1px solid rgba(99,102,241,0.4);
+            color: #818cf8;
+        }
+
+        .header-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.83rem;
+            color: var(--text-sec);
+        }
+
+        .contact-item i {
+            color: var(--primary-light);
+            font-size: 0.85rem;
+            width: 14px;
+            text-align: center;
+        }
+
+        .contact-item a:hover { color: #fff; }
+
+        /* ===== Body ===== */
+        .resume-body {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+
+        /* ===== Sidebar ===== */
+        .sidebar {
+            background: rgba(255,255,255,0.025);
+            border-right: 1px solid var(--border);
+            padding: 36px 28px;
+        }
+
+        /* ===== Main Content ===== */
+        .main-content {
+            padding: 36px 40px;
+        }
+
+        /* ===== Section ===== */
+        .section { margin-bottom: 32px; }
+        .section:last-child { margin-bottom: 0; }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--primary-light);
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-label i { font-size: 0.85rem; }
+
+        /* ===== Summary ===== */
+        .summary-text {
+            font-size: 0.92rem;
+            color: var(--text-sec);
+            line-height: 1.8;
+        }
+
+        .summary-text strong { color: var(--text); }
+
+        /* ===== Experience / Timeline ===== */
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 24px;
+        }
+
+        .timeline-item:last-child { margin-bottom: 0; }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 8px;
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 8px rgba(99,102,241,0.6);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 3px; top: 20px;
+            width: 2px;
+            height: calc(100% + 6px);
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+
+        .timeline-item:last-child::after { display: none; }
+
+        .tl-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+            gap: 10px;
+        }
+
+        .tl-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .tl-date {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: rgba(14,165,233,0.12);
+            border: 1px solid rgba(14,165,233,0.3);
+            padding: 2px 10px;
+            border-radius: 50px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .tl-subtitle {
+            font-size: 0.83rem;
+            color: var(--primary-light);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .tl-points {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tl-points li {
+            font-size: 0.85rem;
+            color: var(--text-sec);
+            padding: 3px 0 3px 14px;
+            position: relative;
+        }
+
+        .tl-points li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-light);
+            font-size: 0.75rem;
+        }
+
+        .tl-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .tl-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 50px;
+            background: rgba(99,102,241,0.12);
+            border: 1px solid rgba(99,102,241,0.3);
+            color: #818cf8;
+        }
+
+        /* ===== Skills ===== */
+        .skill-group { margin-bottom: 18px; }
+        .skill-group:last-child { margin-bottom: 0; }
+
+        .skill-group-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .skill-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-chip {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 50px;
+            border: 1px solid var(--border);
+            color: var(--text-sec);
+            background: rgba(255,255,255,0.04);
+            transition: all 0.2s;
+        }
+
+        /* ===== Education ===== */
+        .edu-item { margin-bottom: 18px; }
+        .edu-item:last-child { margin-bottom: 0; }
+
+        .edu-degree {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 3px;
+        }
+
+        .edu-school {
+            font-size: 0.8rem;
+            color: var(--primary-light);
+            margin-bottom: 2px;
+        }
+
+        .edu-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== Certifications ===== */
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            margin-bottom: 10px;
+        }
+
+        .cert-item:last-child { margin-bottom: 0; }
+
+        .cert-icon-wrap {
+            width: 36px; height: 36px;
+            border-radius: 8px;
+            background: var(--grad);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .cert-name {
+            font-size: 0.83rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .cert-org {
+            font-size: 0.73rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== Links ===== */
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.83rem;
+            color: var(--text-sec);
+            margin-bottom: 12px;
+        }
+
+        .link-item:last-child { margin-bottom: 0; }
+
+        .link-item i {
+            width: 28px; height: 28px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .link-item .icon-linkedin { background: rgba(10,102,194,0.25); color: #0a66c2; }
+        .link-item .icon-github   { background: rgba(255,255,255,0.08); color: #fff; }
+        .link-item .icon-email    { background: rgba(99,102,241,0.2); color: #818cf8; }
+        .link-item .icon-phone    { background: rgba(16,185,129,0.2); color: #10b981; }
+
+        .link-item a { transition: color 0.2s; }
+        .link-item a:hover { color: var(--primary-light); }
+
+        /* ===== Languages / Soft Skills ===== */
+        .soft-list { display: flex; flex-direction: column; gap: 6px; }
+
+        .soft-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.83rem;
+            color: var(--text-sec);
+        }
+
+        .soft-item::before {
+            content: '';
+            display: inline-block;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* ===== Print Styles ===== */
+        @media print {
+            @page { size: A4; margin: 8mm 10mm; }
+
+            body { background: #fff !important; color: #1a1a2e !important; }
+
+            .print-bar { display: none !important; }
+
+            .resume-wrapper { padding: 0 !important; max-width: 100% !important; }
+
+            .resume-card {
+                border-radius: 0 !important;
+                border: none !important;
+                box-shadow: none !important;
+                background: #fff !important;
+            }
+
+            .resume-header {
+                background: linear-gradient(135deg, #312e81, #1e3a5f) !important;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .sidebar { background: #f8f8ff !important; border-right: 1px solid #e0e0e6 !important; }
+
+            .section-label { color: #6366f1 !important; border-bottom-color: #e0e0e6 !important; }
+
+            .cert-item,
+            .skill-chip { background: #f3f3fc !important; border-color: #d0d0e6 !important; }
+
+            .tl-tag { background: #ede9fe !important; border-color: #c4b5fd !important; color: #5b21b6 !important; }
+
+            .summary-text,
+            .tl-points li,
+            .edu-school,
+            .contact-item { color: #374151 !important; }
+
+            .header-name,
+            .header-title,
+            .tl-title,
+            .edu-degree { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+
+            .tl-date { background: rgba(14,165,233,0.2) !important; color: #0369a1 !important; }
+
+            .link-item a { color: #4f46e5 !important; }
+
+            /* Ensure colors print */
+            * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 700px) {
+            .header-content { flex-direction: column; gap: 20px; text-align: center; }
+            .header-contact { justify-content: center; }
+            .resume-body { grid-template-columns: 1fr; }
+            .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
+            .resume-header { padding: 36px 24px 28px; }
+            .main-content, .sidebar { padding: 28px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== Print Bar ===== -->
+    <div class="print-bar">
+        <div class="print-bar-left">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <span class="print-bar-title">Shubham Labade — Resume</span>
+        </div>
+        <div class="print-bar-actions">
+            <button class="btn-pdf btn-pdf-primary" onclick="window.print()">
+                <i class="fas fa-file-pdf"></i> Download PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== Resume ===== -->
+    <div class="resume-wrapper">
+        <div class="resume-card">
+
+            <!-- Header -->
+            <div class="resume-header">
+                <div class="header-content">
+                    <img src="profile.jpg" alt="Shubham Labade" class="header-avatar"
+                         onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='flex';">
+                    <div class="header-avatar-placeholder" id="avatar-placeholder" style="display:none;">SL</div>
+
+                    <div class="header-info">
+                        <div class="header-name">Shubham Labade</div>
+                        <div class="header-title">Full Stack Developer &nbsp;·&nbsp; MERN Stack &nbsp;·&nbsp; Java Spring Boot</div>
+
+                        <div class="header-badges">
+                            <span class="badge badge-green">
+                                <i class="fas fa-circle" style="font-size:0.5rem;"></i> Open to Work
+                            </span>
+                            <span class="badge badge-blue">
+                                <i class="fas fa-briefcase" style="font-size:0.6rem;"></i> Freelance Available
+                            </span>
+                            <span class="badge badge-purple">
+                                <i class="fas fa-graduation-cap" style="font-size:0.6rem;"></i> M.Sc. Computer Science
+                            </span>
+                        </div>
+
+                        <div class="header-contact">
+                            <span class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:shubhamlabade2023@gmail.com">shubhamlabade2023@gmail.com</a>
+                            </span>
+                            <span class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+919370973847">+91 9370973847</a>
+                            </span>
+                            <span class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Pune, Maharashtra, India
+                            </span>
+                            <span class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/shubham-labade-330b931bb" target="_blank">LinkedIn</a>
+                            </span>
+                            <span class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/shubhamlabade2026" target="_blank">github.com/shubhamlabade2026</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div class="resume-body">
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+
+                    <!-- Technical Skills -->
+                    <div class="section">
+                        <div class="section-label">
+                            <i class="fas fa-code"></i> Technical Skills
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-group-label">Languages</div>
+                            <div class="skill-chips">
+                                <span class="skill-chip">Core Java</span>
+                                <span class="skill-chip">Advanced Java</span>
+                                <span class="skill-chip">JavaScript</span>
+                                <span class="skill-chip">C</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-group-label">Frameworks</div>
+                            <div class="skill-chips">
+                                <span class="skill-chip">React.js</span>
+                                <span class="skill-chip">Node.js</span>
+                                <span class="skill-chip">Spring Boot</span>
+                                <span class="skill-chip">Hibernate</span>
+                                <span class="skill-chip">Express.js</span>
+                                <span class="skill-chip">Bootstrap</span>
+                                <span class="skill-chip">Tailwind CSS</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-group-label">Databases</div>
+                            <div class="skill-chips">
+                                <span class="skill-chip">MySQL</span>
+                                <span class="skill-chip">MongoDB</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-group-label">Web & API</div>
+                            <div class="skill-chips">
+                                <span class="skill-chip">HTML5</span>
+                                <span class="skill-chip">CSS3</span>
+                                <span class="skill-chip">RESTful APIs</span>
+                                <span class="skill-chip">JWT Auth</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-group-label">Tools</div>
+                            <div class="skill-chips">
+                                <span class="skill-chip">Git</span>
+                                <span class="skill-chip">GitHub</span>
+                                <span class="skill-chip">VS Code</span>
+                                <span class="skill-chip">IntelliJ</span>
+                                <span class="skill-chip">Postman</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="section">
+                        <div class="section-label">
+                            <i class="fas fa-certificate"></i> Certifications
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon-wrap"><i class="fab fa-java"></i></div>
+                            <div>
+                                <div class="cert-name">FullStack Java</div>
+                                <div class="cert-org">Spark IT, Pune — 2025</div>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon-wrap"><i class="fab fa-react"></i></div>
+                            <div>
+                                <div class="cert-name">MERN Stack</div>
+                                <div class="cert-org">Spark IT, Pune — 2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="section">
+                        <div class="section-label">
+                            <i class="fas fa-star"></i> Soft Skills
+                        </div>
+                        <div class="soft-list">
+                            <span class="soft-item">Problem Solving</span>
+                            <span class="soft-item">Team Collaboration</span>
+                            <span class="soft-item">Clean Code Practices</span>
+                            <span class="soft-item">Quick Learner</span>
+                            <span class="soft-item">Communication</span>
+                            <span class="soft-item">Attention to Detail</span>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="section">
+                        <div class="section-label">
+                            <i class="fas fa-language"></i> Languages
+                        </div>
+                        <div class="soft-list">
+                            <span class="soft-item">English — Professional</span>
+                            <span class="soft-item">Hindi — Fluent</span>
+                            <span class="soft-item">Marathi — Native</span>
+                        </div>
+                    </div>
+
+                </div><!-- /sidebar -->
+
+                <!-- Main Content -->
+                <div class="main-content">
+
+                    <!-- Summary -->
+                    <div class="section">
+                        <div class="section-label">
+                            <i class="fas fa-user"></i> Professional Summary
+                        </div>
+                        <p class="summary-text">
+                            Motivated and detail-oriented <strong>M.Sc. Computer Science postgraduate</strong> from Modern College of Arts, Science and Commerce, Pune, with strong expertise in both <strong>Java Full Stack</strong> and <strong>MERN Stack development</strong>. Skilled in building scalable web applications, developing robust backend systems, and creating intuitive user interfaces. Passionate about solving real-world problems through clean, efficient code. Available for <strong>freelance projects</strong> and <strong>full-time opportunities</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="section">
+                        <div class="section-label">
+                            <i class="fas fa-laptop-code"></i> Projects
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="tl-header">
+                                <span class="tl-title">Real Estate Platform</span>
+                                <span class="tl-date">2025 – Present</span>
+                            </div>
+                            <div class="tl-subtitle">Full Stack Web Application</div>
+                            <ul class="tl-points">
+                                <li>Comprehensive platform for property listings with search and filtering functionality</li>
+                                <li>Implemented user registration, authentication with JWT, and contact enquiry forms</li>
+                                <li>Built RESTful API with Node.js/Express and MySQL for robust data management</li>
+                                <li>Developed responsive React.js frontend with intuitive UI/UX</li>
+                            </ul>
+                            <div class="tl-tags">
+                                <span class="tl-tag">React.js</span>
+                                <span class="tl-tag">Node.js</span>
+                                <span class="tl-tag">MySQL</span>
+                                <span class="tl-tag">REST API</span>
+                                <span class="tl-tag">JWT</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="tl-header">
+                                <span class="tl-title">Annapurna Greens</span>
+                                <span class="tl-date">2025 – Present</span>
+                            </div>
+                            <div class="tl-subtitle">E-Commerce Marketplace Platform</div>
+                            <ul class="tl-points">
+                                <li>Online marketplace connecting farmers directly with dealers and consumers</li>
+                                <li>Features product listings, order management, and real-time inventory updates</li>
+                                <li>Built complete e-commerce flow with cart, checkout, and admin panel</li>
+                                <li>Implemented farmer–dealer connectivity with role-based access control</li>
+                            </ul>
+                            <div class="tl-tags">
+                                <span class="tl-tag">React.js</span>
+                                <span class="tl-tag">Node.js</span>
+                                <span class="tl-tag">MySQL</span>
+                                <span class="tl-tag">E-Commerce</span>
+                                <span class="tl-tag">RBAC</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="tl-header">
+                                <span class="tl-title">Finance Dashboard Backend</span>
+                                <span class="tl-date">2025</span>
+                            </div>
+                            <div class="tl-subtitle">Backend REST API — Deployed on Vercel</div>
+                            <ul class="tl-points">
+                                <li>Designed and implemented backend system for a finance dashboard with role-based access</li>
+                                <li>Includes user management, financial record CRUD, and summary-level analytics endpoints</li>
+                                <li>Built with Node.js/Express, Prisma ORM, and deployed serverlessly on Vercel</li>
+                            </ul>
+                            <div class="tl-tags">
+                                <span class="tl-tag">Node.js</span>
+                                <span class="tl-tag">Express</span>
+                                <span class="tl-tag">Prisma</span>
+                                <span class="tl-tag">Vercel</span>
+                                <span class="tl-tag">REST API</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="tl-header">
+                                <span class="tl-title">Developer Portfolio Website</span>
+                                <span class="tl-date">2025</span>
+                            </div>
+                            <div class="tl-subtitle">Personal Portfolio — GitHub Pages</div>
+                            <ul class="tl-points">
+                                <li>Designed and built a modern, SEO-optimized portfolio with dark mode and animations</li>
+                                <li>Implemented schema markup, sitemap, Google Analytics, and WhatsApp integration</li>
+                                <li>Node.js/Express backend with MySQL for contact form submissions</li>
+                            </ul>
+                            <div class="tl-tags">
+                                <span class="tl-tag">HTML5</span>
+                                <span class="tl-tag">CSS3</span>
+                                <span class="tl-tag">JavaScript</span>
+                                <span class="tl-tag">Node.js</span>
+                                <span class="tl-tag">SEO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="section">
+                        <div class="section-label">
+                            <i class="fas fa-graduation-cap"></i> Education
+                        </div>
+
+                        <div class="edu-item">
+                            <div class="edu-degree">Master of Science — Computer Science</div>
+                            <div class="edu-school">Modern College of Arts, Science and Commerce, Pune</div>
+                            <div class="edu-meta">
+                                <span>Shivajinagar, Pune</span>
+                                <span style="color: var(--accent);">2023 – 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="edu-item">
+                            <div class="edu-degree">Bachelor of Science — Computer Science</div>
+                            <div class="edu-school">R.B.N.B College, Shrirampur</div>
+                            <div class="edu-meta">
+                                <span>Shrirampur, Ahilyanagar</span>
+                                <span style="color: var(--accent);">2020 – 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="edu-item">
+                            <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+                            <div class="edu-school">R.B.N.B College, Shrirampur</div>
+                            <div class="edu-meta">
+                                <span>Shrirampur, Ahilyanagar</span>
+                                <span style="color: var(--accent);">2019 – 2020</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Offered -->
+                    <div class="section">
+                        <div class="section-label">
+                            <i class="fas fa-concierge-bell"></i> Services &amp; Rates
+                        </div>
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div class="cert-item">
+                                <div class="cert-icon-wrap" style="background: linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-laptop-code"></i></div>
+                                <div>
+                                    <div class="cert-name">Full Stack Development</div>
+                                    <div class="cert-org">Starting from $500</div>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon-wrap" style="background: linear-gradient(135deg,#0ea5e9,#06b6d4)"><i class="fas fa-paint-brush"></i></div>
+                                <div>
+                                    <div class="cert-name">Frontend Development</div>
+                                    <div class="cert-org">Starting from $300</div>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon-wrap" style="background: linear-gradient(135deg,#10b981,#059669)"><i class="fas fa-server"></i></div>
+                                <div>
+                                    <div class="cert-name">Backend Development</div>
+                                    <div class="cert-org">Starting from $400</div>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon-wrap" style="background: linear-gradient(135deg,#f59e0b,#ef4444)"><i class="fas fa-shopping-cart"></i></div>
+                                <div>
+                                    <div class="cert-name">E-Commerce Solutions</div>
+                                    <div class="cert-org">Starting from $800</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /main-content -->
+            </div><!-- /resume-body -->
+        </div><!-- /resume-card -->
+    </div><!-- /resume-wrapper -->
+
+</body>
+</html>
