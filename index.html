@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="9ecfbf4c69ec4a06">
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            page_title: 'Shubham Labade Portfolio',
+            page_location: window.location.href
+        });
+        // Track Hire Me / WhatsApp clicks as conversions
+        function trackHireClick(source) {
+            gtag('event', 'hire_click', { event_category: 'engagement', event_label: source });
+        }
+        function trackResumeDownload() {
+            gtag('event', 'resume_download', { event_category: 'engagement', event_label: 'resume_pdf' });
+        }
+        function trackWhatsApp() {
+            gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: 'floating_button' });
+        }
+    </script>
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Shubham Labade | Full Stack Developer | React, Node.js, Java | Hire for Freelance</title>
+    <meta name="title" content="Shubham Labade | Full Stack Developer | React, Node.js, Java | Hire for Freelance">
+    <meta name="description"
+        content="Hire Shubham Labade - Professional Full Stack Developer from Pune, India. Expert in React.js, Node.js, Java Spring Boot, MySQL. Available for freelance projects. M.Sc. Computer Science with expertise in MERN Stack and Java Full Stack development.">
+    <meta name="keywords"
+        content="Full Stack Developer, Hire Developer, Freelance Developer, React Developer, Node.js Developer, Java Developer, MERN Stack Developer, Web Developer Pune, India Developer, Spring Boot, MySQL, MongoDB, Frontend Developer, Backend Developer, Shubham Labade, Portfolio, Web Application Development, E-commerce Developer, Real Estate Website Developer">
+    <meta name="author" content="Shubham Labade">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://shubhamlabade2026.github.io/Shubham-Labade-Portfolio/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shubhamlabade2026.github.io/Shubham-Labade-Portfolio/">
+    <meta property="og:title" content="Shubham Labade | Full Stack Developer | Available for Hire">
+    <meta property="og:description"
+        content="Professional Full Stack Developer from Pune, India. Expert in React, Node.js, Java. Available for freelance web development projects.">
+    <meta property="og:image" content="https://shubhamlabade2026.github.io/Shubham-Labade-Portfolio/profile.jpg">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="Shubham Labade Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://shubhamlabade2026.github.io/Shubham-Labade-Portfolio/">
+    <meta name="twitter:title" content="Shubham Labade | Full Stack Developer | Available for Hire">
+    <meta name="twitter:description"
+        content="Professional Full Stack Developer from Pune, India. Expert in React, Node.js, Java. Available for freelance web development projects.">
+    <meta name="twitter:image" content="https://shubhamlabade2026.github.io/Shubham-Labade-Portfolio/profile.jpg">
+
+    <!-- Additional SEO -->
+    <meta name="geo.region" content="IN-MH">
+    <meta name="geo.placename" content="Pune">
+    <meta name="geo.position" content="18.5204;73.8567">
+    <meta name="ICBM" content="18.5204, 73.8567">
+
+    <!-- Structured Data - Person Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shubham Labade",
+        "url": "https://shubhamlabade2026.github.io/Shubham-Labade-Portfolio/",
+        "image": "https://shubhamlabade2026.github.io/Shubham-Labade-Portfolio/profile.jpg",
+        "jobTitle": "Full Stack Developer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+        },
+        "email": "shubhamlabade2023@gmail.com",
+        "telephone": "+91-9370973847",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Pune",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "India"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/shubham-labade-330b931bb",
+            "https://github.com/shubhamlabade2026"
+        ],
+        "knowsAbout": ["React.js", "Node.js", "Java", "Spring Boot", "MySQL", "MongoDB", "JavaScript", "HTML", "CSS", "REST API", "Full Stack Development", "MERN Stack"],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Modern College Of Arts Science and Commerce, Pune"
+        }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">SL</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <h1 class="hero-title">
+                        <span class="name-first">Shubham</span>
+                        <span class="name-last">Labade</span>
+                    </h1>
+                    <div class="hero-subtitle-wrapper">
+                        <span class="hero-subtitle-prefix">I'm a</span>
+                        <span class="hero-subtitle" id="typed-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        M.Sc. Computer Science postgraduate with strong expertise in
+                        <strong>Java Full Stack</strong> and <strong>MERN Stack</strong> development.
+                        Passionate about building scalable web applications and creating intuitive user interfaces.
+                    </p>
+                    <div class="open-to-work-badge" id="open-to-work-badge">
+                        <span class="otw-dot"></span>
+                        <span>Open to Work &amp; Freelance</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-hire" onclick="trackHireClick('hero_hire_me')">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Hire Me</span>
+                        </a>
+                        <a href="Shubham_Labade_Resume.pdf" download="Shubham_Labade_Resume.pdf" class="btn btn-resume" onclick="trackResumeDownload()">
+                            <i class="fas fa-file-download"></i>
+                            <span>Download Resume</span>
+                        </a>
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="mailto:shubhamlabade2023@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+919370973847" class="social-link" aria-label="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shubham-labade-330b931bb" target="_blank"
+                            class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/shubhamlabade2026" target="_blank" class="social-link"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <div class="image-bg"></div>
+                        <img src="profile.jpg" alt="Shubham Labade" class="profile-image">
+                        <div class="floating-badge badge-1">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get To Know</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-img-wrapper">
+                        <img src="profile.jpg" alt="Shubham Labade" class="about-profile-image">
+                        <div class="experience-badge">
+                            <span class="exp-number">2+</span>
+                            <span class="exp-text">Years of Coding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="about-description">
+                        I am a motivated and detail-oriented <strong>M.Sc. Computer Science postgraduate</strong>
+                        with strong expertise in both <strong>Java Full Stack</strong> and <strong>MERN Stack
+                            development</strong>.
+                        Skilled in building scalable web applications, developing robust backend systems, and
+                        creating intuitive user interfaces.
+                    </p>
+                    <p class="about-description">
+                        Fresher with <strong>Java, Spring Boot, Hibernate, MySQL, MongoDB, React.js</strong>,
+                        along with modern front-end frameworks and responsive UI design. Passionate about solving
+                        real-world problems through clean, efficient code and eager to contribute to innovative,
+                        dynamic, and collaborative teams.
+                    </p>
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Full Stack</h3>
+                            <p>End-to-end development</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-database"></i>
+                            <h3>Databases</h3>
+                            <p>MySQL & MongoDB</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>M.Sc. CS</h3>
+                            <p>Postgraduate</p>
+                        </div>
+                    </div>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Pune, India</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>shubhamlabade2023@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9370973847</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Offer</span>
+                <h2 class="section-title">My Services</h2>
+                <p class="section-subtitle">I help businesses and startups build amazing digital products</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Full Stack Development</h3>
+                    <p>End-to-end web application development using modern technologies like React, Node.js, Spring
+                        Boot, and MySQL/MongoDB.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Custom Web Applications</li>
+                        <li><i class="fas fa-check"></i> RESTful API Development</li>
+                        <li><i class="fas fa-check"></i> Database Design</li>
+                        <li><i class="fas fa-check"></i> Authentication & Security</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-label">Starting from</span>
+                        <span class="price">$500</span>
+                    </div>
+                    <a href="#contact" class="btn btn-service">Get Quote</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Beautiful, responsive user interfaces using React.js, HTML5, CSS3, and modern UI frameworks.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> React.js Applications</li>
+                        <li><i class="fas fa-check"></i> UI/UX Implementation</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-label">Starting from</span>
+                        <span class="price">$300</span>
+                    </div>
+                    <a href="#contact" class="btn btn-service">Get Quote</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Robust backend systems using Java Spring Boot, Node.js/Express with secure APIs and databases.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> API Development</li>
+                        <li><i class="fas fa-check"></i> Database Integration</li>
+                        <li><i class="fas fa-check"></i> Server Configuration</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-label">Starting from</span>
+                        <span class="price">$400</span>
+                    </div>
+                    <a href="#contact" class="btn btn-service">Get Quote</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce Solutions</h3>
+                    <p>Complete e-commerce platforms with payment integration, cart system, and admin panels.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Shopping Cart</li>
+                        <li><i class="fas fa-check"></i> Payment Gateway</li>
+                        <li><i class="fas fa-check"></i> Admin Dashboard</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-label">Starting from</span>
+                        <span class="price">$800</span>
+                    </div>
+                    <a href="#contact" class="btn btn-service">Get Quote</a>
+                </div>
+            </div>
+            <div class="services-cta">
+                <p>Have a custom project in mind?</p>
+                <a href="#contact" class="btn btn-hire">
+                    <i class="fas fa-envelope"></i>
+                    <span>Let's Discuss Your Project</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Programming Languages
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span>Core Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span>Advanced Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-c"></i>
+                            </div>
+                            <span>C Programming</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-layer-group"></i>
+                        Frameworks & Libraries
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>Hibernate</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-database"></i>
+                        Databases
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-paint-brush"></i>
+                        Web Technologies
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span>RESTful APIs</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <span>JWT Auth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Recent Work</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Real Estate Project -->
+                <div class="project-card featured">
+                    <div class="project-badge">Currently Working</div>
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/shubhamlabade2026" target="_blank" class="project-link"
+                                    title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">React.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                        <h3 class="project-title">Real Estate Platform</h3>
+                        <p class="project-description">
+                            A comprehensive real estate platform for property listings, featuring property search,
+                            filtering, user registration, and contact forms. Built with React.js for the frontend
+                            and Node.js with MySQL database for robust data management.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> Property Listings & Search</li>
+                            <li><i class="fas fa-check"></i> User Registration & Authentication</li>
+                            <li><i class="fas fa-check"></i> Contact Form & Inquiries</li>
+                            <li><i class="fas fa-check"></i> Responsive Design</li>
+                        </ul>
+                        <div class="project-status">
+                            <span class="status-indicator"></span>
+                            <span>Expected Completion: January 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Annapurna Greens Project -->
+                <div class="project-card featured">
+                    <div class="project-badge">Currently Working</div>
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #10b981, #059669);">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/shubhamlabade2026" target="_blank" class="project-link"
+                                    title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">React.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">E-Commerce</span>
+                        </div>
+                        <h3 class="project-title">Annapurna Greens</h3>
+                        <p class="project-description">
+                            An online marketplace platform for fruits and vegetables that connects farmers directly
+                            with dealers and consumers. Features include product listings, order management,
+                            farmer-dealer connectivity, and a seamless buying experience.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> Farmer & Dealer Connection Platform</li>
+                            <li><i class="fas fa-check"></i> Fruits & Vegetables Marketplace</li>
+                            <li><i class="fas fa-check"></i> Order Management System</li>
+                            <li><i class="fas fa-check"></i> Real-time Inventory Updates</li>
+                        </ul>
+                        <div class="project-status">
+                            <span class="status-indicator"></span>
+                            <span>In Active Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2025</div>
+                        <h3 class="timeline-title">Master of Science (Computer Science)</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-university"></i>
+                            Modern College Of Arts Science and Commerce
+                        </p>
+                        <p class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Shivajinagar, Pune
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - 2023</div>
+                        <h3 class="timeline-title">Bachelor of Science (Computer Science)</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-university"></i>
+                            R.B.N.B College, Shrirampur
+                        </p>
+                        <p class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Shrirampur, Ahilyanagar
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 2020</div>
+                        <h3 class="timeline-title">Higher Secondary Certificate (HSC)</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-school"></i>
+                            R.B.N.B College, Shrirampur
+                        </p>
+                        <p class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Shrirampur, Ahilyanagar
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="certifications">
+                <h3 class="cert-title">
+                    <i class="fas fa-certificate"></i>
+                    Certifications
+                </h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>FullStack Java</h4>
+                            <p>Spark IT Pune 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>MERN Stack</h4>
+                            <p>Spark IT Pune 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-text">
+                        I'm currently looking for opportunities as a Full Stack Developer.
+                        Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:shubhamlabade2023@gmail.com">shubhamlabade2023@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <a href="tel:+919370973847">+91 9370973847</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <span>Pune, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/shubham-labade-330b931bb" target="_blank"
+                            class="social-btn linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/shubhamlabade2026" target="_blank" class="social-btn github">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">SL</span>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="footer-social">
+                    <a href="mailto:shubhamlabade2023@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shubham-labade-330b931bb" target="_blank"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/shubhamlabade2026" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Shubham Labade. All rights reserved.</p>
+                <p>Designed & Built with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a id="whatsapp-float"
+       href="https://wa.me/919370973847?text=Hi%20Shubham!%20I%20visited%20your%20portfolio%20and%20I'd%20like%20to%20discuss%20a%20project%20with%20you."
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp"
+       onclick="trackWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Let's Talk on WhatsApp!</span>
+        <span class="whatsapp-pulse"></span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

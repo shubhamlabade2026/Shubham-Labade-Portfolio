@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shubhamlabade2026.github.io/Shubham-Labade-Portfolio/sitemap.xml
+
+# Shubham Labade - Full Stack Developer Portfolio
+# Contact: shubhamlabade2023@gmail.com
